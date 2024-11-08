@@ -1,13 +1,15 @@
 import Button from "../Button/Button";
 import TextBoxInput from "../TextboxInput/TextBoxInput";
 
-export default function TextInputForm() {
+export default function TextInputForm({handleFormSubmit,handleTextInputChange}) {
+  
     return (
-        <form>
+        <form onSubmit={handleFormSubmit}>
             <div>
-                <TextBoxInput 
+                <TextBoxInput
                     placeholder="Enter a word or a phrase hear..."
                     label="Enter a word or a phrase hear..."
+                    onChangeHandler={handleTextInputChange}
                 />
             </div>
             <div>
