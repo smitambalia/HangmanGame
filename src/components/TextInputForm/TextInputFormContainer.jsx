@@ -5,12 +5,15 @@ import TextInputForm from "./TextInputForm";
 export default function TextInputFormContainer() {
 
     let [inputType,setInputType] = useState("password");
+    const [input, setInput] = useState("");
+
     function handleFormSubmit(event) {
         event.preventDefault();
-        console.log("Form Submitted!");
+        console.log("Form Submitted!",input);
     }
     function handleTextInputChange(event) {
         console.log("text input changed-> ", event.target.value);
+        setInput(event.target.value);
     }
     function handleShowHideHandler() {
 
