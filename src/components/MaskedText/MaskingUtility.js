@@ -3,21 +3,25 @@
  * @param { The word is given and expected to be guessed } originalWord 
  * @param { Letters that are already guessed by the user } guessedLetters 
  * Ex : originalWord : SMIT,
- * guessedLetters : ["S", "T"]
+ * guessedLetters : ["s", "T"]
  * 
- * return ->  ["S _ _ T"]
+ * returns ->  ["S _ _ T"]
+ * 
  */
-export default function MaskingUtility(originalWord, guessedLetters) {
-    guessedLetters = guessedLetters.map(letter => letter.toUpperCase());
 
+
+export default function getMaskedString(originalWord, guessedLetters) {
+    // returns all the guessed letters in uppercase
+    guessedLetters = guessedLetters.map(letter => letter.toUpperCase());
+    console.log("Guessed Letters -> ", guessedLetters);
     const result = originalWord.toUpperCase().split("").map(char => {
-        if(guessedLetters.has(char)) {
+        if(guessedLetters.includes(char)) {
             return char;
         }
         else {
             return "_";
         }
     })
-
-    return result.join("");
+    
+    return result;
 }
