@@ -6,9 +6,9 @@ export default function PlayGames() {
   return (
     <>
       <h1> Play Game </h1>
-      <MaskedText text={state.word} guessedText={["S","T"]} />
+      <MaskedText text={state.word} guessedText={[]} />
       <div>
-        <LetterButtons/>
+        <LetterButtons text={state.word} guessedLetters={[]}/>
       </div>
       <Link className="text-blue-400" to="/start">
         Link to Start Game
