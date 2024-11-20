@@ -8,7 +8,7 @@ export default function  MaskedText({text,guessedText}) {
             {
                 maskedText.map((letter, index) => {
                     return (
-                        <span key={index} className="m-1">
+                        <span key={index} className="m-2">
                             {letter}
                         </span>
                     )
