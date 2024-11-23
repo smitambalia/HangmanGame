@@ -20,6 +20,7 @@ export default function PlayGames() {
     setGuessedLetters([...guessedLetters,letter]);
   }
 
+
   return (
     <>
       <h1> Play Game </h1>
