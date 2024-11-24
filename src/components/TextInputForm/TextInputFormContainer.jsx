@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 export default function TextInputFormContainer() {
   let [inputType, setInputType] = useState("password");
   const [input, setInput] = useState("");
+  const [demo,setDemo] = useState("");
+
   const navigate = useNavigate(); // useNavigate is a hook that returns a navigate function
 
   function handleFormSubmit(event) {
@@ -31,6 +33,8 @@ export default function TextInputFormContainer() {
 
   useEffect(() => {
     console.log("Component Updated and Loaded !")
+    if(!demo) setDemo("hello");
+    
   },[inputType])
 
   useEffect(() => {

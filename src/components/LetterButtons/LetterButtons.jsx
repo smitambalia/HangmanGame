@@ -1,7 +1,7 @@
 const ALPHABETS = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
 
 export default function LetterButtons({ text, guessedLetters, onLetterClick }) {
-  const originalLetter = text.toUpperCase().split("");
+  const originalLetter = text?.toUpperCase().split("");
   console.log("Guessed Letters->", guessedLetters);
   const buttonStyle = (letter) => {
     if (guessedLetters.includes(letter)) {

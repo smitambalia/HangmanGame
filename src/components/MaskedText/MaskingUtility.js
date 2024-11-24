@@ -13,7 +13,7 @@
 export default function getMaskedString(originalWord, guessedLetters) {
     // returns all the guessed letters in uppercase
     guessedLetters = guessedLetters.map(letter => letter.toUpperCase());
-    const result = originalWord.toUpperCase().split("").map(char => {
+    const result = originalWord?.toUpperCase().split("").map(char => {
         if(guessedLetters.includes(char)) {
             return char;
         }

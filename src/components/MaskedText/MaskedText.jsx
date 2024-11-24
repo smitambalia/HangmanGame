@@ -6,7 +6,7 @@ export default function  MaskedText({text,guessedText}) {
     return (
         <>
             {
-                maskedText.map((letter, index) => {
+                maskedText?.map((letter, index) => {
                     return (
                         <span key={index} className="m-2">
                             {letter}
