@@ -5,6 +5,8 @@ export default function Button({
   styleType = "primary",
   type = "button",
 }) {
+
+  console.log(getStyleType(styleType));
   return (
     <div>
       <button

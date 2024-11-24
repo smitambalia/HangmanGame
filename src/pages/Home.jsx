@@ -20,12 +20,12 @@ export default function Home() {
   return (
     <>
       <Link to="/play" state={{ word: word }}>
-        <Button text="Single Player" />
+        <Button text="Single Player" styleType="primary"/>
       </Link>
 
       <Link to="/start">
         <div className="mt-4">
-          <Button text="Multi player" type="secondry" />
+          <Button text="Multi player" styleType="secondary"/>
         </div>
       </Link>
     </>
