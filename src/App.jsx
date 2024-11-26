@@ -6,10 +6,11 @@ import Home from "./pages/Home";
 import { WordContext } from "./context/WordContext";
 import { useState } from "react";
 function App() {
-  const { wordList, setWordList } = useState([]);
+  const [ wordList, setWordList ] = useState([]);
+  const [word, setWord] = useState("");
 
   return (
-    <WordContext.Provider value={{ wordList, setWordList }}>
+    <WordContext.Provider value={{ wordList, setWordList, word,setWord }}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/start" element={<StartGame />} />
